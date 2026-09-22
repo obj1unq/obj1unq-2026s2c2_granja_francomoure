@@ -72,6 +72,10 @@ object granja {
 		validarRegar(cultivo, position)
 		cultivo.regar()
 	}
+
+	method cosechar(cultivo){
+		cultivo.cosechar()
+	}
 }
 
 object maiz{
@@ -87,6 +91,10 @@ object maiz{
 		if(estado = bebe){
 			estado = adulta	
 		}
+	}
+
+	method cosechar(){
+		
 	}
  }
 object trigo{
@@ -110,6 +118,8 @@ object trigo{
 			etapa = 0	
 		}
 	}
+
+	method cosechar(){}
 }
 object tomaco{
 	method position(){
@@ -118,5 +128,7 @@ object tomaco{
  	method image() {
    		return "tomaco.png"
  	}
+
+	method cosechar(){}
 }
 
