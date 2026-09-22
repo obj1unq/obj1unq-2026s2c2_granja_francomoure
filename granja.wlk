@@ -90,12 +90,26 @@ object maiz{
 	}
  }
 object trigo{
+	var etapa = 0
+	
 	method position(){
    		return position
  	}
  	method image() {
-   		return "trigo_0.png"
+   		return "trigo_" + etapa + ".png"
  	}
+
+	method regar(){
+		self.evolucionar()
+	}
+
+	method evolucionar(){
+		if(etapa > 3){ 
+			etapa = etapa + 1
+		}else{
+			etapa = 0	
+		}
+	}
 }
 object tomaco{
 	method position(){
