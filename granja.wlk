@@ -67,4 +67,68 @@ object granja {
 	method hayCultivo(position) {
 		return cultivos.any({cultivo => cultivo.position() == position})
 	}
+
+	method regar(cultivo, position){
+		validarRegar(cultivo, position)
+		cultivo.regar()
+	}
+
+	method cosechar(cultivo){
+		cultivo.cosechar()
+	}
 }
+
+object maiz{
+
+	var estado = adulta
+	method position(){
+   		return position
+ 	}
+ 	method image() {
+   		return "maiz_" + estado + ".png"
+ 	}
+	method regar(){
+		if(estado = bebe){
+			estado = adulta	
+		}
+	}
+
+	method cosechar(){
+		
+	}
+ }
+object trigo{
+	var etapa = 0
+	
+	method position(){
+   		return position
+ 	}
+ 	method image() {
+   		return "trigo_" + etapa + ".png"
+ 	}
+
+	method regar(){
+		self.evolucionar()
+	}
+
+	method evolucionar(){
+		if(etapa > 3){ 
+			etapa = etapa + 1
+		}else{
+			etapa = 0	
+		}
+	}
+
+	method cosechar(){}
+}
+object tomaco{
+	method position(){
+   		return position
+ 	}
+ 	method image() {
+   		return "tomaco.png"
+ 	}
+
+	method cosechar(){}
+}
+
