@@ -67,16 +67,28 @@ object granja {
 	method hayCultivo(position) {
 		return cultivos.any({cultivo => cultivo.position() == position})
 	}
+
+	method regar(cultivo, position){
+		validarRegar(cultivo, position)
+		cultivo.regar()
+	}
 }
 
 object maiz{
+
+	var estado = adulta
 	method position(){
    		return position
  	}
  	method image() {
-   		return "maiz_bebe.png"
+   		return "maiz_" + estado + ".png"
  	}
-}
+	method regar(){
+		if(estado = bebe){
+			estado = adulta	
+		}
+	}
+ }
 object trigo{
 	method position(){
    		return position
