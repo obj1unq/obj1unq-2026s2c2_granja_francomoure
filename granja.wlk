@@ -68,3 +68,29 @@ object granja {
 		return cultivos.any({cultivo => cultivo.position() == position})
 	}
 }
+
+object maiz{
+	method position(){
+   		return position
+ 	}
+ 	method image() {
+   		return "maiz_bebe.png"
+ 	}
+}
+object trigo{
+	method position(){
+   		return position
+ 	}
+ 	method image() {
+   		return "trigo_0.png"
+ 	}
+}
+object tomaco{
+	method position(){
+   		return position
+ 	}
+ 	method image() {
+   		return "tomaco.png"
+ 	}
+}
+
