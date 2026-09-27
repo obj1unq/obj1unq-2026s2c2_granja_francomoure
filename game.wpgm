@@ -8,10 +8,13 @@ program lagranja {
 	game.height(10)
 	game.width(10)
 	game.ground("fondo.png")
-
- 	game.addVisualCharacter(personaje)
- 	
-
- 	//  COMIENZA
+	
+	game.addVisualCharacter(personaje)
+	keyboard.m().onPressDo({ personaje.plantar(maiz) })
+	keyboard.t().onPressDo({ personaje.plantar(trigo) })
+	keyboard.o().onPressDo({ personaje.plantar(tomaco) })
+	keyboard.r().onPressDo({ personaje.regar() })
+	
+	//  COMIENZA
 	game.start()
 }
